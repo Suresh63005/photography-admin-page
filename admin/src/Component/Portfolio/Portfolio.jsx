@@ -12,7 +12,7 @@ const Portfolio = () => {
 
   const fetchImageData = async()=>{
     try {
-      const res = await axios.get("http://localhost:5000/file/getimage")
+      const res = await axios.get("https://photography-server-tawny.vercel.app/file/getimage")
       console.log(res.data,"from dbimages")
       setImages(res.data)
     } catch (error) {
@@ -22,7 +22,7 @@ const Portfolio = () => {
   const deleteImage = async (id) => {
     try {
         const imageid = id;
-        const res = await axios.post("http://localhost:5000/file/deleteimage", { imageid });
+        const res = await axios.post("https://photography-server-tawny.vercel.app/file/deleteimage", { imageid });
         console.log(res);
         window.location.reload();
     } catch (error) {

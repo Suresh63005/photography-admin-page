@@ -34,7 +34,7 @@ const[img,setImg]=useState()
         e.preventDefault();
       console.log(data);
       try {
-        const res = await axios.post("http://localhost:5000/file/uploadimage", data);
+        const res = await axios.post("https://photography-server-tawny.vercel.app/file/uploadimage", data);
         console.log(res);
         window.location.reload();
         
@@ -47,7 +47,7 @@ const[img,setImg]=useState()
 
     const fetchData = async()=>{
         try {
-            const res = await axios.get("http://localhost:5000/contactus/getcontact")
+            const res = await axios.get("https://photography-server-tawny.vercel.app/contactus/getcontact")
             setContact(res.data)
             console.log(res.data)
          } catch (error) {
